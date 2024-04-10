@@ -34,7 +34,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-The first steps you need to begin installing osTicket is to have an active Azure Virtural Machine installed and open. You'll have to play arond with your reigonal location in order to find a size option that is applicable to you. Also make sure that you choose Windows 10 Pro in the Image section. When you have your selecions settled, just make a username and password, let Azure create its own subnet and IP, and we can move on to the next step.
+The first steps you need to begin installing osTicket is to have an active Azure Virtural Machine installed and a Resource Group open. You'll have to play around with your reigonal location in order to find a size option that is applicable to you. Also make sure that you choose Windows 10 Pro in the Image section. When you have your selecions settled, just make a username and password, let Azure create its own subnet and IP, and we can move on to the next step.
 <br />
 
 <p>
