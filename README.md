@@ -28,7 +28,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - [VC_redist.x86.exe](https://drive.google.com/file/d/1s1OsGF3-ioO0_9LYizPRiVuIkb3lFJgH/view?usp=share_link)
 - [ MySQL](https://drive.google.com/file/d/1_OWh9p7VQLcrB0q_V7qT8yHl0xo5gv7z/view?usp=share_link)
 
-<h2>Installation Steps</h2>
+<h2>Installation Steps: Prerequisite</h2>
 
 <p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/ce3500cf-5f8d-4283-8a65-4c13059d68f0"/>
@@ -56,5 +56,26 @@ After your done making the VM, we have to set up IIS for our VM. Open up a Remot
 Once you have evertyhing above set up, we need to install software to help us run osTicket. Up in the prerequisites are all the instalation files requried for this process, of which our first batch of installation will be PHP Manager for IIS and the Rewrite Module. Noting fancy or specific to download these, so once thats done we can move on to the next step. in your C Drive, create a directory called C:\PHP and then download the following 
 https://drive.google.com/file/d/1snNMtLdCOpMtkCyD4mvl9yOOmvVIp9fP/view?usp=share_link
 
-Take this zip file and extract the content into C:\PHP. If it ask you to trust the zip file, choose to keep anyway and continue onward
+Take this zip file and extract the content into C:\PHP. If it ask you to trust the zip file, choose to keep anyway and continue onward, downloading VC_redist.x86.exe and MySQL. A note for SQL, make sure you follow these steps: Typical Setup ->
+Launch Configuration Wizard (after install) ->
+Standard Configuration ->
+Password
 <br />
+
+<h2> Installation Setup: osTicket</h2>
+
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/18653918-3ce3-4601-89e8-62ae8d7fd334"/>
+</p>
+<p>
+So, you have all the prereq files installed, we can *fianlly* get into installing osTicket. We'll start opening IIS as an admin (right click the application to do so) then got PHP. You'll realize that it's no enabled, so to fix the probem, click where it says Register New PHP Version, and go to that C Drive we made earlier, choosing PHP CGI. Then go back to IIS, restart the server in order to refresh it.
+<br />
+
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/3e5a836f-38a1-4e5c-8024-e9874bcb8fb5"/>
+</p>
+<p>
+Once its refershed, just to make sure things go right, close out IIS and reopen it as an admin. On the left side will be some dropdowns that will take us to osTicket. Drop down Sites, Default Web Site, and click the osTicket folder, then on the right side click Browse, and voilla! osTicket will have successfully opened. We've won the battle, but not the war. 
+<br />
+
+<h2> osTicket</h2>
