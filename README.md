@@ -72,10 +72,30 @@ So, you have all the prereq files installed, we can *fianlly* get into installin
 <br />
 
 <p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/1840123d-fc3c-4c2c-872e-ce5013324e51"/>
+"/>
+</p>
+<p>
+Now it's time to finally install osTicket. Download this zip file https://drive.google.com/open?id=1VeVXKlzHDRjeaVUL99ptq7qYbrbXdFxJ&usp=drive_copy and go to your computers files. It's a good idea to open up two pages so you can drop the required folder into the right place with minimal effort. 
+
+Go to the new zip folder, extract and copy the upload folder. Then go to your C-Drive and find inetpub\wwwroot and paste that upload folder into this area. Once thats done, rename the upload file within wwwroot into osTicket
+<br />
+
+
+<p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/3e5a836f-38a1-4e5c-8024-e9874bcb8fb5"/>
 </p>
 <p>
-Once its refershed, just to make sure things go right, close out IIS and reopen it as an admin. On the left side will be some dropdowns that will take us to osTicket. Drop down Sites, Default Web Site, and click the osTicket folder, then on the right side click Browse, and voilla! osTicket will have successfully opened. We've won the battle, but not the war. 
+Once osTicket is put into our files, just to make sure things go right, close out IIS and reopen it as an admin. On the left side will be some dropdowns that will take us to osTicket. Drop down Sites, Default Web Site, and click the osTicket folder, then on the right side click Browse, and voilla! osTicket will have successfully opened. We've won the battle, but not the war. 
 <br />
 
 <h2> osTicket</h2>
+
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/af3c19c7-2df9-4786-9655-1dd5d37f01f3"/>
+"/>
+</p>
+<p>
+So, osTicket has finally opened, but you may realize some features aren't active. While they are optional, you can't utilize osTicket in its entirety like this tutorial intends. 
+
+To start fixing this issue, go to IIS and drop down sites -> Default -> osTicket, double click PHP Manager, click Enable or Disable an extension and enable the following: php_imap.dll, php_intl.dll, php_opcache.dll. Once it's all enabled, refresh osTicket from your browser and see whats changed!
