@@ -39,7 +39,6 @@ The first steps you need to begin installing osTicket is to have an active Azure
 
 <p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/3395d7f7-255c-496b-ad08-0afc74d4a17e"/>
-
 </p>
 <p>
 After your done making the VM, we have to set up IIS for our VM. Open up a Remote Desktop Connection on your computer, then copy and paste the IP Address into there, and use the sign in you made for your VM. Then open up the control panel in your VM, and go to Programs, Turn On and Off Programs, then drop down Internet Inforamtion Services, World Wide Web Services, Application Development Features and check on CGI and Common HTTP Features. Then drop down Web Management Tools and check on ISS Managment Console. Now go back and double check if you have everything on before moving on to the next step
@@ -49,8 +48,6 @@ After your done making the VM, we have to set up IIS for our VM. Open up a Remot
 
 <p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/360ffbce-36a5-4249-af2b-76072c874394"/>
-"/>
-
 </p>
 <p>
 Once you have evertyhing above set up, we need to install software to help us run osTicket. Up in the prerequisites are all the instalation files requried for this process, of which our first batch of installation will be PHP Manager for IIS and the Rewrite Module. Noting fancy or specific to download these, so once thats done we can move on to the next step. in your C Drive, create a directory called C:\PHP and then download the following 
@@ -73,7 +70,6 @@ So, you have all the prereq files installed, we can *fianlly* get into installin
 
 <p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/1840123d-fc3c-4c2c-872e-ce5013324e51"/>
-"/>
 </p>
 <p>
 Now it's time to finally install osTicket. Download this zip file https://drive.google.com/open?id=1VeVXKlzHDRjeaVUL99ptq7qYbrbXdFxJ&usp=drive_copy and go to your computers files. It's a good idea to open up two pages so you can drop the required folder into the right place with minimal effort. 
@@ -89,13 +85,28 @@ Go to the new zip folder, extract and copy the upload folder. Then go to your C-
 Once osTicket is put into our files, just to make sure things go right, close out IIS and reopen it as an admin. On the left side will be some dropdowns that will take us to osTicket. Drop down Sites, Default Web Site, and click the osTicket folder, then on the right side click Browse, and voilla! osTicket will have successfully opened. We've won the battle, but not the war. 
 <br />
 
-<h2> osTicket</h2>
+<h2>osTicket</h2>
 
 <p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/af3c19c7-2df9-4786-9655-1dd5d37f01f3"/>
-"/>
 </p>
 <p>
 So, osTicket has finally opened, but you may realize some features aren't active. While they are optional, you can't utilize osTicket in its entirety like this tutorial intends. 
 
-To start fixing this issue, go to IIS and drop down sites -> Default -> osTicket, double click PHP Manager, click Enable or Disable an extension and enable the following: php_imap.dll, php_intl.dll, php_opcache.dll. Once it's all enabled, refresh osTicket from your browser and see whats changed!
+To start fixing this issue, go to IIS and drop down sites -> Default -> osTicket, double click PHP Manager, click Enable or Disable an extension and enable the following: php_imap.dll, php_intl.dll, php_opcache.dll. The next step is simple, go to your C Drive and rename C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. Once it's all enabled, refresh osTicket from your browser and see whats changed!
+<br />
+
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/8260d80d-881a-4aa7-9cf8-50c8530cd360)"/>
+</p>
+<p>
+The last thing to do is going to be opening access to the ost-config file. Find it in your C Drive by going through inetpub -> wwwroot -> osTicket -> include, then find the file and right click it open the properties menu. From here you'll go through Security, click Advanced and then Disable Inheritance and Remove all Inherited Permissions on this Project. Once it's done, click Select a Principle, type "Everyone" into the chat box, click ok and check the box that says Full Control. After all that is done, go back to osTicket and continue putting in the necessary information.
+<br />
+
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/3e5a836f-38a1-4e5c-8024-e9874bcb8fb5"/>
+</p>
+<p>
+The final step in our master plan is to install HeidiSQL in order to make a database for osTicket to use. Download HeidiSQL from here https://docs.google.com/document/d/1WovrX2DaS9xkfaSr4LXyB4YnnWpXIgPCMMbbfgHmGVw/edit
+
+Once it' installed and open
