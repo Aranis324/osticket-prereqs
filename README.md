@@ -41,7 +41,7 @@ The first steps you need to begin installing osTicket is to have an active Azure
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/3395d7f7-255c-496b-ad08-0afc74d4a17e"/>
 </p>
 <p>
-After your done making the VM, we have to set up IIS for our VM. Open up a Remote Desktop Connection on your computer, then copy and paste the IP Address into there, and use the sign in you made for your VM. Then open up the control panel in your VM, and go to Programs, Turn On and Off Programs, then drop down Internet Inforamtion Services, World Wide Web Services, Application Development Features and check on CGI and Common HTTP Features. Then drop down Web Management Tools and check on ISS Managment Console. Now go back and double check if you have everything on before moving on to the next step
+After your done making the VM, we have to set up IIS for our VM. Open up a Remote Desktop Connection on your computer, then copy and paste the IP Address of your VM into there, and use the sign in you made for your it. Then open up the control panel in your VM, and go to Programs, Turn On and Off Programs, then drop down Internet Inforamtion Services, World Wide Web Services, Application Development Features and check on CGI and Common HTTP Features. Then drop down Web Management Tools and check on ISS Managment Console. Now go back and double check if you have everything on before moving on to the next step
 </p>
 </p>
 <br />
@@ -50,7 +50,7 @@ After your done making the VM, we have to set up IIS for our VM. Open up a Remot
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/360ffbce-36a5-4249-af2b-76072c874394"/>
 </p>
 <p>
-Once you have evertyhing above set up, we need to install software to help us run osTicket. Up in the prerequisites are all the instalation files requried for this process, of which our first batch of installation will be PHP Manager for IIS and the Rewrite Module. Noting fancy or specific to download these, so once thats done we can move on to the next step. in your C Drive, create a directory called C:\PHP and then download the following 
+Once you have evertyhing above set up, we need to install software to help us run osTicket. Up in the prerequisites are all the instalation files requried for this process, of which our first batch of installation will be PHP Manager for IIS and the Rewrite Module. Noting fancy or specific to download these, so once thats done we can move on to the next step. In your C Drive, create a directory called C:\PHP and then download the following 
 https://drive.google.com/file/d/1snNMtLdCOpMtkCyD4mvl9yOOmvVIp9fP/view?usp=share_link
 
 Take this zip file and extract the content into C:\PHP. If it ask you to trust the zip file, choose to keep anyway and continue onward, downloading VC_redist.x86.exe and MySQL. A note for SQL, make sure you follow these steps: Typical Setup ->
@@ -65,7 +65,7 @@ Password
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/18653918-3ce3-4601-89e8-62ae8d7fd334"/>
 </p>
 <p>
-So, you have all the prereq files installed, we can *fianlly* get into installing osTicket. We'll start opening IIS as an admin (right click the application to do so) then got PHP. You'll realize that it's no enabled, so to fix the probem, click where it says Register New PHP Version, and go to that C Drive we made earlier, choosing PHP CGI. Then go back to IIS, restart the server in order to refresh it.
+So, you have all the prereq files installed, we can *fianlly* get into installing osTicket. We'll start opening IIS as an admin (right click the application to do so) then go to PHP. You'll realize that it's not enabled, so to fix the probem, click where it says Register New PHP Version, and go to that C Drive we made earlier, choosing PHP CGI. Then go back to IIS, restart the server in order to refresh it.
 <br />
 
 <p>
@@ -116,5 +116,5 @@ Once it's installed and open, use the sign in you made when you installed MySQL.
 <p>
 And with all that, were finally done! osTicket should now be installed with no issues and you can continue with logging in. Use this URL to enter osTicket once everything is set up http://localhost/osTicket/
 
-A little post installation cleanup you can do is delete C:\inetpub\wwwroot\osTicket\setup, and set permissions for ost.config to Read Only
+A little post installation cleanup you can do is delete the setup foldr of C:\inetpub\wwwroot\osTicket\setup, and set permissions for ost.config to where only the boxes "Read" and "Read and Execute" are checked on
 <br />
