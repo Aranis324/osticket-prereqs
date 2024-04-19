@@ -104,9 +104,17 @@ The last thing to do is going to be opening access to the ost-config file. Find 
 <br />
 
 <p>
-<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/3e5a836f-38a1-4e5c-8024-e9874bcb8fb5"/>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/a8f74edc-18d2-481e-8428-2e84b8de87f8"/>
 </p>
 <p>
 The final step in our master plan is to install HeidiSQL in order to make a database for osTicket to use. Download HeidiSQL from here https://docs.google.com/document/d/1WovrX2DaS9xkfaSr4LXyB4YnnWpXIgPCMMbbfgHmGVw/edit
 
-Once it' installed and open
+Once it's installed and open, use the sign in you made when you installed MySQL. Then when you've fully opened HeidiSQL, right click where it says Unamed and click New Database, naming it osTicket.
+<br />
+
+<p>
+<p>
+And with all that, were finally done! osTicket should now be installed with no issues and you can continue with logging in. Use this URL to enter osTicket once everything is set up http://localhost/osTicket/
+
+A little post installation cleanup you can do is delete C:\inetpub\wwwroot\osTicket\setup, and set permissions for ost.config to Read Only
+<br />
