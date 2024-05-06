@@ -88,21 +88,28 @@ Once osTicket is put into our files, just to make sure things go right, close ou
 <h2>osTicket</h2>
 
 <p>
-<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/af3c19c7-2df9-4786-9655-1dd5d37f01f3"/>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/af89e762-9220-43b1-b9f8-f050bede3e33"/>
 </p>
 <p>
 So, osTicket has finally opened, but you may realize some features aren't active. While they are optional, you can't utilize osTicket in its entirety like this tutorial intends. 
-
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/af3c19c7-2df9-4786-9655-1dd5d37f01f3"/>
+</p>
+<p>
 To start fixing this issue, go to IIS and drop down sites -> Default -> osTicket, double click PHP Manager, click Enable or Disable an extension and enable the following: php_imap.dll, php_intl.dll, php_opcache.dll. The next step is simple, go to your C Drive and rename C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php to C:\inetpub\wwwroot\osTicket\include\ost-config.php. Once it's all enabled, refresh osTicket from your browser and see whats changed!
 <br />
-
 <p>
-<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/8260d80d-881a-4aa7-9cf8-50c8530cd360)"/>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/f6ae1f49-fe1e-40ee-80ad-235cc30a005a"/>
+</p>
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/8260d80d-881a-4aa7-9cf8-50c8530cd360"/>
 </p>
 <p>
 The last thing to do is going to be opening access to the ost-config file. Find it in your C Drive by going through inetpub -> wwwroot -> osTicket -> include, then find the file and right click it open the properties menu. From here you'll go through Security, click Advanced and then Disable Inheritance and Remove all Inherited Permissions on this Project. Once it's done, click Select a Principle, type "Everyone" into the chat box, click ok and check the box that says Full Control. After all that is done, go back to osTicket and continue putting in the necessary information.
 <br />
-
+<p>
+<img src= "https://github.com/Aranis324/osticket-prereqs/assets/163223660/db06e08a-d38c-4883-8418-dedf734942e5"/>
+</p>
 <p>
 <img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/a8f74edc-18d2-481e-8428-2e84b8de87f8"/>
 </p>
@@ -111,10 +118,17 @@ The final step in our master plan is to install HeidiSQL in order to make a data
 
 Once it's installed and open, use the sign in you made when you installed MySQL. Then when you've fully opened HeidiSQL, right click where it says Unamed and click New Database, naming it osTicket.
 <br />
+<p>
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/f166692b-81a9-45bc-b4fc-a6c751b35542"/>
+</p>
+
+And with all that, were finally done! Go ahead and type in all of the information into the database settings. 
+<br />
 
 <p>
-<p>
-And with all that, were finally done! osTicket should now be installed with no issues and you can continue with logging in. Use this URL to enter osTicket once everything is set up http://localhost/osTicket/
+<img src="https://github.com/Aranis324/osticket-prereqs/assets/163223660/5d36e2c9-8877-478c-aade-ae1caf9e9575"/>
+</p>
+osTicket should now be installed with no issues and you can continue with logging in. Use this URL to enter osTicket once everything is set up http://localhost/osTicket/
 
 A little post installation cleanup you can do is delete the setup foldr of C:\inetpub\wwwroot\osTicket\setup, and set permissions for ost.config to where only the boxes "Read" and "Read and Execute" are checked on
 <br />
